@@ -157,7 +157,7 @@ sub GetXML
    }
 
    ### Request URL
-   my $response = $ua->request( HTTP::Request->new(GET => $url.'/?mime=xml') );
+   my $response = $ua->request( HTTP::Request->new(GET => $url.'?mime=xml') );
 
    if (!$response->is_success) {
      $plugin->plugin_exit( UNKNOWN, $response->headers->title );
